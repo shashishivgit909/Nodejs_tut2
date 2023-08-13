@@ -295,7 +295,7 @@ VVVi :
 TOPIC:MIDDLEWARE
 
 DEFINITION: Middleware are some functions which are applied on routes to access and modify or change in request and response .
- EventTarget. od use of it: use in user authentication checking , making ban oif website in some countries etc.
+ EventTarget. od use of it: use in user authentication checking , making ban of website in some countries etc.
 
  //how to make  middleware. 
  1st way , make middlware in same file of Express js API
@@ -322,7 +322,7 @@ DEFINITION: Middleware are some functions which are applied on routes to access 
    
  }
 
- app.use(reqFilter); //apply middleware on all route (i.e before visiting nay page by route first it need to check middleware) 
+ app.use(reqFilter); //apply middleware on all route (i.e before visiting any page by route, first it need to check middleware) 
  app.get("/",(req, resp)=>{
     resp.send("welcome to home page");
  })
@@ -333,7 +333,7 @@ DEFINITION: Middleware are some functions which are applied on routes to access 
 
  app.listen(5000)
 
- Q1.use of middlw ware ?
+ Q1.use of middle ware ?
  Q2.types of middleware: 
  ans: 1.application level middleware : applyon all routes.
       2.route-level middlware : middleware apply on some specific  routes
@@ -455,7 +455,7 @@ async function dbConnect(){
 
 // NOte: if we want to find some specific data then we can use find({name:"shashi"})  in place of find() in above code , name:"shashi" is a condition
 
-//########### TOPIC : this code is to read database using nodejs using find()
+//########### TOPIC :READ opreation from MONGoDB:  this code is to read database using nodejs using find()
 
 /*
 const dbConnect=require('./db/mongodb')
@@ -490,7 +490,7 @@ const saveInDB = async () => {
     roll: Number
   });
   //step3 : make model for mongoose  (i.e apply schema for given collection in mongodb   )
-  const ProductModel = mongoose.model('depts', ProductSchema) //this will create collection manager using  ProductSchema
+  const ProductModel = mongoose.model('depts', ProductSchema) //this will create collection manager using  ProductSchema, here dept is collection name
   let data = new ProductModel({ "name": "shiv", "roll": 64 });  // make object  type modeldata for new data 
   try {
     let result = await data.save(); // this may give error so use try catch fot this .
